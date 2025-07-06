@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>games - rato's world</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Fonte VT323 para simular Windows 95 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Switch corporativo -->
+    <a href="https://ldmrqs.com" target="_blank" title="ldmrqs.com">
+        <div class="corporate-switch">
+          <img src="assets/job.gif" width="20" alt="work">
+        </div>
+    </a>
+
+    <!-- Ratinhos flutuantes -->
+    <img src="assets/rat.gif" class="floating-rat rat-1" width="50" alt="rato">
+    <img src="assets/rat.gif" class="floating-rat rat-2" width="40" alt="rato">
+    <img src="assets/rat.gif" class="floating-rat rat-3" width="60" alt="rato">
+
+    <!-- ASCII Art Header -->
+    <pre class="ascii-header">
+    ╦═╗╔═╗╔╦╗╔═╗  ╦ ╦╔═╗╦═╗╦  ╔╦╗
+    ╠╦╝╠═╣ ║ ║ ║  ║║║║ ║╠╦╝║   ║║
+    ╩╚═╩ ╩ ╩ ╚═╝  ╚╩╝╚═╝╩╚═╩═╝═╩╝
+    </pre>
+
+    <marquee behavior="alternate" scrollamount="3">
+        🐀 WELCOME TO THE RAT'S NEST! BEST VIEWED ON YOUR PC, SAY GOODBYE TO YOUR MOBILE 💀
+    </marquee>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>[ nav ]</h3>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="music.html">music</a></li>
+                <li><a href="posts.html">posts</a></li>
+                <li><a href="games.html" style="background: #8B0000; color: #000;">games</a></li>
+                <li><a href="books.html">books</a></li>
+                <li><a href="musiccover.html">music covers</a></li>
+                <li><a href="videos.html">videos</a></li>
+                <li><a href="photos.html">photos</a></li>
+                <li><a href="wheretofind.html">where to find me</a></li>
+                <li><a href="guestbook.html">sign my guestbook</a></li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">[ status ]</h3>
+            <p style="color: #666; font-size: 12px;">
+                mood: <span style="color: #87CEEB;">coca zero</span><br>
+                playing: <span style="color: #87CEEB;">guitar</span><br>
+                reading: <span style="color: #87CEEB;">foundation, isaac asimov</span><br>
+                <span class="blink" style="color: #8B0000;">●</span> online
+            </p>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Games Header Section -->
+            <section class="content-section" style="margin-bottom: 30px;">
+                <h2>[ gaming ]</h2>
+                <div class="games-intro">
+                    <img src="assets/claire.gif" alt="gaming setup" class="claire redfield gif">
+                    <p>favorite games: red dead redemption 1 & 2, resident evil series, silent hill series, rule of rose, tekken series, mortal kombat series</p>
+                </div>
+            </section>
+
+            <!-- playing games -->
+            <section class="content-section">
+                <h2>[ playing ]</h2>
+                <table class="games-table">
+                    <tr>
+                        <td class="game-title"><a href="#">Resident Evil 0</a></td>
+                        <td class="game-platform">PC</td>
+                    </tr>
+                    <tr>
+                        <td class="game-title"><a href="#">Devil May Cry</a></td>
+                        <td class="game-platform">PS1</td>
+                    </tr>
+                    <tr>
+                        <td class="game-title"><a href="#">Bayonetta</a></td>
+                        <td class="game-platform">PC</td>
+                    </tr>
+                    <tr>
+                        <td class="game-title"><a href="#">Detroit: Become Human</a></td>
+                        <td class="game-platform">PC</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- finished games -->
+            <section class="content-section" style="margin-top: 30px;">
+                <h2>[ finished ]</h2>
+                <table class="games-table">
+                    <tr>
+                        <td class="game-title"><a href="#"> Silent Hill 2 Remake</a></td>
+                        <td class="game-platform"> PC</td>
+                        <td class="game-rating"> ★ ★ ★ ★ ★</td>
+                    </tr>
+                    <tr>
+                        <td class="game-title"><a href="#">Resident Evil 2 (1998)</a></td>
+                        <td class="game-platform">PC</td>
+                        <td class="game-rating">★ ★ ★ ★ ★</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Back to home button -->
+            <div class="back-button-container">
+                <button class="retro-button" onclick="window.location.href='index.html'">
+                    ← BACK TO HOME
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="punk-footer">
+        <p>
+            <img src="assets/fire.gif" width="20" alt="skull">
+            made with coke zero and pure html
+            <img src="assets/fire.gif" width="20" alt="fire">
+        </p>
+        <p style="margin-top: 5px;">
+            © since 2001
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
