@@ -1,0 +1,396 @@
+/* =================================
+   RATO'S WORLD - STYLE.CSS
+   Punk Digital Chaos Aesthetic
+   ================================= */
+
+/* Import da fonte Windows 95 */
+@font-face {
+    font-family: 'Windows 95';
+    src: url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body e Background */
+body {
+    font-family: "VT323", "MS Sans Serif", "Microsoft Sans Serif", "Geneva", "Chicago", monospace;
+    font-size: 16px;
+    background: #000;
+    color: #0f0;
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+/* Switch corporativo */
+.corporate-switch {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #8B0000;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.corporate-switch:hover {
+    background: #8B0000;
+    transform: scale(1.1);
+}
+
+/* Header com ASCII art */
+.ascii-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #8B0000;
+    font-family: "Courier New", "Lucida Console", monospace;
+    font-size: 12px;
+    line-height: 1.2;
+    text-shadow: 0 0 10px #8B0000;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 180px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #8B0000;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+}
+
+.sidebar h3 {
+    color: #87CEEB;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar a {
+    color: #0f0;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 2px 4px;
+}
+
+.sidebar a:hover {
+    background: #8B0000;
+    color: #000;
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #8B0000;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+}
+
+/* Welcome section */
+.welcome-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px dashed #8B0000;
+}
+
+.welcome-section h1 {
+    color: #87CEEB;
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-shadow: 0 0 5px #87CEEB;
+    letter-spacing: 1px;
+}
+
+.welcome-section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.welcome-section .highlight {
+    color: #87CEEB;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+/* Grid de conteúdo */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Seções de conteúdo */
+.content-section {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #8B0000;
+    padding: 15px;
+}
+
+.content-section h2 {
+    color: #87CEEB;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Items de conteúdo */
+.content-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #8B0000;
+}
+
+.content-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.content-item .date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.content-item .title {
+    color: #87CEEB;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.content-item .title:hover {
+    color: #8B0000;
+    text-decoration: underline;
+}
+
+.content-item .description {
+    font-size: 16px;
+    color: #999;
+    line-height: 1.4;
+}
+
+.content-item .rating {
+    color: #ffff00;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* Marquee */
+marquee {
+    background: #8B0000;
+    color: #000;
+    padding: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.punk-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #8B0000;
+    color: #666;
+}
+
+.punk-footer img {
+    margin: 0 5px;
+}
+
+/* Botões retro */
+.retro-button {
+    background: #c0c0c0;
+    color: #000;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 4px 12px;
+    font-family: "VT323", "MS Sans Serif", monospace;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    box-shadow: inset -1px -1px #000;
+    letter-spacing: 1px;
+}
+
+.retro-button:hover {
+    background: #d4d4d4;
+}
+
+.retro-button:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px #000;
+}
+
+/* Ratinhos flutuantes */
+.floating-rat {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateX(-100px) translateY(0); }
+    25% { transform: translateX(calc(100vw + 100px)) translateY(-50px); }
+    50% { transform: translateX(calc(100vw + 100px)) translateY(50px); }
+    75% { transform: translateX(-100px) translateY(100px); }
+    100% { transform: translateX(-100px) translateY(0); }
+}
+
+.rat-1 { top: 20%; animation-delay: 0s; }
+.rat-2 { top: 50%; animation-delay: 5s; }
+.rat-3 { top: 80%; animation-delay: 10s; }
+
+/* Animações */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+/* =================================
+   PÁGINA ABOUT
+   ================================= */
+
+.about-content {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+.about-content .highlight {
+    color: #87CEEB;
+    text-shadow: 0 0 3px #87CEEB;
+}
+
+.love-list {
+    list-style: none;
+    padding: 0;
+}
+
+.love-list li {
+    padding: 5px 0;
+    font-size: 16px;
+    color: #0f0;
+    border-bottom: 1px dashed #333;
+}
+
+.love-list li:last-child {
+    border-bottom: none;
+}
+
+.love-list li:hover {
+    color: #87CEEB;
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+
+body.corporate-mode {
+    background: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+body.corporate-mode .sidebar,
+body.corporate-mode .main-content,
+body.corporate-mode .content-section,
+body.corporate-mode .welcome-section {
+    background: white;
+    border-color: #ddd;
+    box-shadow: none;
+}
+
+body.corporate-mode .ascii-header,
+body.corporate-mode h1,
+body.corporate-mode h2,
+body.corporate-mode h3 {
+    color: #003366;
+    text-shadow: none;
+}
+
+body.corporate-mode .sidebar a {
+    color: #003366;
+}
+
+body.corporate-mode .sidebar a:hover {
+    background: #003366;
+    color: white;
+}
+
+body.corporate-mode .content-item .title {
+    color: #003366;
+}
+
+body.corporate-mode .content-item .title:hover {
+    color: #0066cc;
+}
+
+body.corporate-mode marquee {
+    display: none;
+}
+
+body.corporate-mode .floating-rat {
+    display: none;
+}
+
+body.corporate-mode .corporate-switch {
+    background: white;
+    border-color: #003366;
+}
+
+body.corporate-mode .corporate-switch:hover {
+    background: #003366;
+    color: white;
+}
