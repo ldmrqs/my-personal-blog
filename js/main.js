@@ -130,53 +130,6 @@ console.log(`
         }, 10000);
     }
     
-    // Adiciona sons aos cliques (se o usuário tiver sons)
-    let soundEnabled = false;
-    
-    // Cria botão de som
-    const soundToggle = document.createElement('div');
-    soundToggle.innerHTML = '🔇';
-    soundToggle.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: rgba(0, 0, 0, 0.8);
-        border: 2px solid #8B0000;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 24px;
-        border-radius: 5px;
-        z-index: 1000;
-    `;
-    soundToggle.title = 'Toggle Sound';
-    document.body.appendChild(soundToggle);
-    
-    soundToggle.addEventListener('click', () => {
-        soundEnabled = !soundEnabled;
-        soundToggle.innerHTML = soundEnabled ? '🔊' : '🔇';
-        
-        if (soundEnabled) {
-            // Toca um beep
-            playBeep();
-        }
-    });
-    
-    // Função para tocar beep
-    function playBeep() {
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        const oscillator = audioContext.createOscillator();
-        const gainNode = audioContext.createGain();
-        
-        oscillator.connect(gainNode);
-        gainNode.connect(audioContext.destination);
-        
-        oscillator.frequency.value = 440;
-        gainNode.gain.value = 0.1;
-        
-        oscillator.start();
-        oscillator.stop(audioContext.currentTime + 0.1);
-    }
-    
     // Adiciona efeito de digitação ao título
     const titleElement = document.querySelector('.welcome-section h1');
     if (titleElement) {
@@ -196,14 +149,3 @@ console.log(`
         setTimeout(typeWriter, 500);
     }
     
-    // Contador de visitas fake
-    const visitCounter = Math.floor(Math.random() * 9999) + 1000;
-    const counterElement = document.createElement('div');
-    counterElement.innerHTML = `<img src="https://web.archive.org/web/20090829052531/http://www.digits.com/images/odometer.gif" alt="counter"> Visitante #${visitCounter}`;
-    counterElement.style.cssText = `
-        text-align: center;
-        margin-top: 20px;
-        font-size: 12px;
-        color: #666;
-    `;
-    document.querySelector('.punk-footer').appendChild(counterElement);
