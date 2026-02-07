@@ -16,16 +16,23 @@
     box-sizing: border-box;
 }
 
-/* Body e Background */
-body {
-    font-family: "VT323", "MS Sans Serif", "Microsoft Sans Serif", "Geneva", "Chicago", monospace;
-    font-size: 16px;
+/* HTML Background */
+html {
     background: #000;
-    color: #0f0;
     background-image: url('../assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+/* Body e Layout */
+body {
+    font-family: "VT323", "MS Sans Serif", "Microsoft Sans Serif", "Geneva", "Chicago", monospace;
+    font-size: 16px;
+    color: #0f0;
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
@@ -33,9 +40,6 @@ body {
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: grayscale;
     font-smooth: never;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
 }
 
 /* Switch corporativo */
