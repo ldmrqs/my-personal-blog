@@ -37,7 +37,3 @@ it will automatically show up on the homepage and posts page.
 - `npm run dev` — start dev server
 - `npm run build` — build to `dist/`
 - `npm run preview` — preview the build locally
-
-## future updates
-- adding some music player on the "music" session
-- updating my info
