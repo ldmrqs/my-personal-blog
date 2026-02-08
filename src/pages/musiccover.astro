@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="music covers - rato's world" currentPage="musiccover">
+    <!-- covers header section -->
+    <section class="content-section" style="margin-bottom: 30px;">
+        <h2>[ covers ]</h2>
+        <div class="music-intro">
+            <img src="/assets/catguitar.gif" alt="cat playing guitar" class="cat playing guitar gif">
+            <p>i like to sing and play instruments, it doesn't mean it's good. my dad thinks it's good.</p>
+        </div>
+    </section>
+
+    <section class="comingsoon-section" style="margin-bottom: 30px;">
+        <h2>[ coming soon ]</h2>
+        <p>i'm still working on this section, but you can check out my <a href="https://www.youtube.com/@mardorr" target="_blank">youtube channel</a> for some of my music.</p>
+        <p>i'll be adding more covers and original songs here soon.</p>
+    </section>
+
+    <!-- Back to home button -->
+    <div class="back-button-container">
+        <button class="retro-button" onclick="window.location.href='/'">
+            &larr; BACK TO HOME
+        </button>
+    </div>
+</BaseLayout>

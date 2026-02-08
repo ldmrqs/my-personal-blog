@@ -1,26 +1,49 @@
+---
+interface Props {
+  title: string;
+  currentPage: string;
+}
+
+const { title, currentPage } = Astro.props;
+
+import '../styles/style.css';
+
+const navItems = [
+  { href: "/", label: "home", id: "home" },
+  { href: "/about/", label: "about", id: "about" },
+  { href: "/music/", label: "music", id: "music" },
+  { href: "/posts/", label: "posts", id: "posts" },
+  { href: "/games/", label: "games", id: "games" },
+  { href: "/books/", label: "books", id: "books" },
+  { href: "/musiccover/", label: "music covers", id: "musiccover" },
+  { href: "/videos/", label: "videos", id: "videos" },
+  { href: "/photos/", label: "photos", id: "photos" },
+];
+---
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>posts - rato's world</title>
+    <title>{title}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Fonte VT323 para simular Windows 95 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
     <!-- Switch corporativo -->
     <a href="https://ldmrqs.com" target="_blank" title="ldmrqs.com">
-      </a>
+    </a>
 
     <!-- Ratinhos flutuantes -->
-    <img src="assets/rat.gif" class="floating-rat rat-1" width="50" alt="rato">
-    <img src="assets/rat.gif" class="floating-rat rat-2" width="40" alt="rato">
-    <img src="assets/rat.gif" class="floating-rat rat-3" width="60" alt="rato">
+    <img src="/assets/rat.gif" class="floating-rat rat-1" width="50" alt="rato">
+    <img src="/assets/rat.gif" class="floating-rat rat-2" width="40" alt="rato">
+    <img src="/assets/rat.gif" class="floating-rat rat-3" width="60" alt="rato">
 
     <!-- ASCII Art Header -->
     <pre class="ascii-header">
@@ -38,21 +61,21 @@
         <aside class="sidebar">
             <h3>[ nav ]</h3>
             <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="music.html">music</a></li>
-                <li><a href="posts.html" style="background: #8B0000; color: #000;">posts</a></li>
-                <li><a href="games.html">games</a></li>
-                <li><a href="books.html">books</a></li>
-                <li><a href="musiccover.html">music covers</a></li>
-                <li><a href="videos.html">videos</a></li>
-                <li><a href="photos.html">photos</a></li>
-            </ul>
+                {navItems.map((item) => (
+                    <li>
+                        <a
+                            href={item.href}
+                            style={currentPage === item.id ? "background: #8B0000; color: #000;" : ""}
+                        >
+                            {item.label}
+                        </a>
+                    </li>
+                ))}
             </ul>
 
             <h3 style="margin-top: 30px;">[ status ]</h3>
             <p style="color: #666; font-size: 12px;">
-                mood: <span style="color: #87CEEB;">coca zero</span><br>
+                mood: <span style="color: #87CEEB;">coke zero</span><br>
                 playing: <span style="color: #87CEEB;">guitar</span><br>
                 reading: <span style="color: #87CEEB;">the robot series, isaac asimov</span><br>
                 <span class="blink" style="color: #8B0000;">●</span> online
@@ -61,36 +84,22 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- About Section -->
-            <section class="content-section" style="margin-bottom: 30px;">
-                <h2>[ posts ]</h2>
-                <div class="about-content">
-                    <p><a href="secondpost.html">new obsession unlocked: digital minimalism.</a></p>
-                    <p><a href="myfirstpost.html">my very first post ever</a></p>
-                </div>
-            </section>
-
-            <!-- Back to home button -->
-            <div class="back-button-container">
-                <button class="retro-button" onclick="window.location.href='index.html'">
-                    ← BACK TO HOME
-                </button>
-            </div>
+            <slot />
         </main>
     </div>
 
     <!-- Footer -->
     <footer class="punk-footer">
         <p>
-            <img src="assets/fire.gif" width="20" alt="skull">
+            <img src="/assets/fire.gif" width="20" alt="skull">
             made with coke zero and pure html
-            <img src="assets/fire.gif" width="20" alt="fire">
+            <img src="/assets/fire.gif" width="20" alt="fire">
         </p>
         <p style="margin-top: 5px;">
-            © since 2001
+            &copy; since 2001
         </p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script is:inline src="/js/main.js"></script>
 </body>
 </html>

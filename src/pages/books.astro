@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="books - rato's world" currentPage="books">
+    <!-- Header Section -->
+    <section class="content-section" style="margin-bottom: 30px;">
+        <h2>[ reading ]</h2>
+        <div class="books-intro">
+            <img src="/assets/books.gif" alt="book setup" class="the positronic man gif">
+            <p>these are my all-time favorite books. no reviews, no ratings. just the books that shaped me.</p>
+        </div>
+    </section>
+
+    <!-- Favorite Books -->
+    <section class="content-section">
+        <h2>[ favorite books ]</h2>
+        <ul class="favorites-list">
+            <li>robot visions by isaac asimov</li>
+            <li>a light that never goes out: the enduring saga of the smiths</li>
+            <li>harry potter and the prisoner of azkaban</li>
+            <li>ain't i a woman? by bell hooks</li>
+            <li>i'm glad my mom died by jennette mccurdy</li>
+            <li>the foundation series by isaac asimov</li>
+        </ul>
+    </section>
+
+    <!-- Back to home button -->
+    <div class="back-button-container">
+        <button class="retro-button" onclick="window.location.href='/'">
+            &larr; BACK TO HOME
+        </button>
+    </div>
+</BaseLayout>

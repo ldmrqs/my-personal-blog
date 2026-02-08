@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts');
+const sortedPosts = allPosts.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<BaseLayout title="rato's world" currentPage="home">
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h1>so good to see you. :)</h1>
+        <p>
+            thanks for coming. this is my little internet corner where i'll share anything that comes to my mind. i hope you like it, fren.
+        </p>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="content-section">
+        <h2>[ latest posts ]</h2>
+
+        {sortedPosts.map((post) => (
+            <article class="content-item">
+                <div class="date">{post.data.date}</div>
+                <a href={`/posts/${post.id}/`} class="title">{post.data.title}</a>
+                <p class="description">{post.data.description}</p>
+            </article>
+        ))}
+    </section>
+</BaseLayout>

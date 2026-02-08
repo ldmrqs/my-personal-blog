@@ -1,0 +1,27 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  date: string;
+}
+
+const { title, date } = Astro.props;
+---
+
+<BaseLayout title={`${title} - rato's world`} currentPage="posts">
+    <section class="content-section" style="margin-bottom: 30px;">
+        <h2>[ {title} ]</h2>
+        <div class="date" style="color: #666; font-size: 14px; margin-bottom: 15px;">{date}</div>
+        <div class="about-content">
+            <slot />
+        </div>
+    </section>
+
+    <!-- Back to home button -->
+    <div class="back-button-container">
+        <button class="retro-button" onclick="window.location.href='/'">
+            &larr; BACK TO HOME
+        </button>
+    </div>
+</BaseLayout>

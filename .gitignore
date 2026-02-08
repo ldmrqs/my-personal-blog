@@ -3,3 +3,10 @@
 
 # Claude Code
 .claude/
+
+# Dependencies
+node_modules/
+
+# Astro build output
+dist/
+.astro/

@@ -19,7 +19,7 @@
 /* HTML Background */
 html {
     background: #000;
-    background-image: url('../assets/background.jpg');
+    background-image: url('/assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

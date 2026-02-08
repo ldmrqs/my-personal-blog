@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="games - rato's world" currentPage="games">
+    <!-- Games Header Section -->
+    <section class="content-section" style="margin-bottom: 30px;">
+        <h2>[ gaming ]</h2>
+        <div class="games-intro">
+            <img src="/assets/claire.gif" alt="gaming setup" class="claire redfield gif">
+            <p>these are my all-time favorite games. no reviews, no ratings. just the games that shaped me.</p>
+        </div>
+    </section>
+
+    <!-- Favorite Games -->
+    <section class="content-section">
+        <h2>[ favorite games ]</h2>
+        <ul class="favorites-list">
+            <li>resident evil series</li>
+            <li>red dead redemption series</li>
+            <li>silent hill</li>
+            <li>tekken series</li>
+            <li>mortal kombat series</li>
+            <li>rule of rose</li>
+        </ul>
+    </section>
+
+    <!-- Back to home button -->
+    <div class="back-button-container">
+        <button class="retro-button" onclick="window.location.href='/'">
+            &larr; BACK TO HOME
+        </button>
+    </div>
+</BaseLayout>
